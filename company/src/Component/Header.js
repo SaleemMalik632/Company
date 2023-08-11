@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { IconButton } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
-import { Menu, Home, Info, Work, People, Phone, QuestionAnswer } from '@mui/icons-material';
-import { red } from "@mui/material/colors";
+import { Home, Info, Work, People, Phone, QuestionAnswer } from '@mui/icons-material';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,25 +12,42 @@ const Navbar = () => {
 
     return (
         <nav className={`main-header`} style={{ zIndex: 100 }}>
-            <ul className={"main-head"}>
+            <div className={"main-head"}>
                 <div>
-                    <h3>infoPro</h3> 
+                    <h2>infoPro</h2>
                 </div>
-                <button class='class2'>  {<FaBars size={30} />}</button>
-                <div class="class1">
-                    <li> 
-                        <Link className="link" to={'/home'}> {<Home style={{ marginBottom: '-9px' }} />} Home </Link>
-                        <Link className="link" to={'/About'}> {<Info style={{ marginBottom: '-9px' }} />} About </Link>
-                        <Link className="link" to={'/Services'}> {<Work style={{ marginBottom: '-9px' }} />} Services </Link>
-                        <Link className="link" to={'/Internships'}> {<People style={{ marginBottom: '-9px' }} />} Internships </Link>
-                        <Link className="link" to={'/Team'}>{<People style={{ marginBottom: '-9px' }} />}  Team </Link>
-                        <Link className="link" to={'/Contact'}>{<Phone style={{ marginBottom: '-9px' }} />}  Contact  </Link>
-                        <Link className="link" to={'/FAQ'}>{<QuestionAnswer style={{ marginBottom: '-9px' }} />}  FAQ </Link>
-                    </li>
-                </div> 
-            </ul> 
+                <div className="icon" onClick={toggleMenu}>
+                    <FaBars size={30} />
+                </div>
+                <div className={`nav-elements ${isMenuOpen && 'active'}` }>
+                    <ul> 
+                        <li>
+                            <NavLink className="link" to={'/home'}> <Home style={{ marginBottom: '-9px' }} /> Home </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/About'}> <Info style={{ marginBottom: '-9px' }} /> About </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/Services'}> <Work style={{ marginBottom: '-9px' }} /> Services </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/Internships'}> <People style={{ marginBottom: '-9px' }} /> Internships </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/Team'}> <People style={{ marginBottom: '-9px' }} /> Team </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/Contact'}> <Phone style={{ marginBottom: '-9px' }} /> Contact </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to={'/FAQ'}> <QuestionAnswer style={{ marginBottom: '-9px' }} /> FAQ </NavLink>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     );
-}; 
- 
+};
+
 export default Navbar;

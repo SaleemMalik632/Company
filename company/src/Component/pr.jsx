@@ -21,7 +21,7 @@ const PR = () => {
                 <div className='menu-icon' onClick={handleShowNavbar}>
                     <Menu />
                 </div>
-                <div className={`nav-elements  ${showNavbar && 'active'}`}> 
+                <div className={`nav-elements  ${showNavbar && 'active'}`  }>  
                     <ul>
                         <li>
                             <NavLink to="/">Home</NavLink>

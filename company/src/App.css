@@ -81,6 +81,13 @@ body {}
     animation: moveUpAnimation 0.3s ease-in-out forwards;
 }
 
+.item{
+    padding-left: 9pc;
+    background-color: #F9E79F;
+}
+
+
+
 
 @keyframes moveUpAnimation {
     from {
@@ -148,6 +155,8 @@ body {}
         margin-top: -100px;
         border-radius: 1pc;
     }
-
+    .item{
+        padding-left: 0px;
+    }
 
 }

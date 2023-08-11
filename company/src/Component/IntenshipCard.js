@@ -1,44 +1,65 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Rating } from '@mui/material';
+import { ThumbUpAlt } from '@mui/icons-material';
+import { useState } from 'react';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
-export default function CardDemo() {
+
+export default function ImgMediaCard({ CardData }) {
+  const [likeCount, setLike] = useState(CardData.likeCount_);
+  const [Checklike, SetChecklike] = useState(false);
+
+  const setLike_ = () => {
+    if (!Checklike) {
+      setLike(likeCount + 1);
+    }
+    else {
+      setLike(likeCount - 1);
+    }
+    SetChecklike(!Checklike);
+  }
+
+
+
   return (
-    <div style={{margin: '25%'}}>
-    <Card sx={{ maxWidth: 600 }}>
-      <CardContent>
-        <Typography variant='h3'  gutterBottom>
-          A Simple Material UI Card
-        </Typography>
-        <Typography variant="h4" component="div">
-         Heading
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          describes the heading
-        </Typography>
-        <Typography variant="body1">
-          Card content
-          <br />
-          {'"describes the content"'}
-        </Typography>
-      </CardContent>
+    <>
       <CardActions>
-        <Button size="small">Card Button</Button>
+        <Card sx={{ maxWidth: 300, margin: '10px', textAlign: 'justify' }}>
+          <CardMedia component="img" image={CardData.url} alt="green iguana" height={200} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center' }}>
+              {CardData.Title}
+            </Typography>
+            <Typography variant='body' >
+              {CardData.Description}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Rating name="rating" defaultValue={CardData.Rating}> </Rating>
+            <Button startIcon={<ThumbUpAlt />} onClick={setLike_}> {likeCount} Likes</Button>
+          </CardActions>
+          <CardActions>
+            <Button variant="outlined" sx={{
+              '&:hover': {
+                backgroundColor: '#1976d2', // Color when hovered
+                color:'white'
+              },
+              '&:focus': {
+                backgroundColor: '#0d47a1', // Color when focused
+                color:'white'
+              },
+            }}>Apply Now</Button>
+          </CardActions>
+        </Card>
       </CardActions>
-    </Card>
-    </div>
+
+    </>
+
   );
 }

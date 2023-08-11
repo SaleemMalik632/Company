@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './Component/Header';
 import HomeSlider from './Component/HomeSlider';
-import BellowGrid from './Component/BellowGrid'
+import BellowGrid from './Component/BellowGrid';
+import AboutUs from './Component/AboutUs';
+
 
 import './App.css';
 
@@ -12,6 +14,7 @@ export default function App() {
         <Nav />
         <HomeSlider />
         <BellowGrid />
+        <AboutUs/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

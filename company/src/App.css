@@ -49,7 +49,23 @@ body{
 .Colur-Grid:hover {
     background-color: #5DADE2 ;
     top: -10px;
-} 
+}
+
+
+.caintainer{
+    background-color: #D5F5E3 ;
+    
+}
+
+.AboutPaper{
+    min-height: 392px;
+    min-width: 430px
+}
+.grid-item{
+    margin-bottom: 1000px;
+}
+
+
 
 
 
@@ -90,6 +106,9 @@ body{
     /* responsive  Grid */
     .Grid {
        margin: 10px;
+    }
+    .grid-item{
+        margin-bottom: 0px;
     }
 
 

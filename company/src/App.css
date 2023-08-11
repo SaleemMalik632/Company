@@ -1,5 +1,5 @@
-body{
-}
+body {}
+
 .main-header {
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body{
 
 .Grid {
     margin-top: 150px;
-} 
+}
 
 .Colur-Grid {
     padding: 100px;
@@ -42,28 +42,60 @@ body{
     position: relative;
     top: 0;
     margin: 10px;
-    transition: background-color 0.5s, top 0.3s;
-    /* font-family: 'Crimson Text', serif; */
-
+    transition: all 0.3s Linear;
 } 
 .Colur-Grid:hover {
-    background-color: #5DADE2 ;
+    background-color: #5DADE2;
     top: -10px;
 }
+.caintainer {
+    background-color: #D5F5E3;
+    padding-bottom: 50px;
 
-
-.caintainer{
-    background-color: #D5F5E3 ;
-    
 }
 
-.AboutPaper{
+.AboutPaper {
     min-height: 392px;
     min-width: 430px
 }
-.grid-item{
+
+.grid-item {
     margin-bottom: 1000px;
 }
+
+.Image-About {
+    margin-top: 100px;
+    border-radius: 1pc;
+}
+
+.page {
+    padding: 20px;
+    border-radius: 1pc;
+    font-family: inherit;
+    transition: all 0.3s linear;
+    top: 0px;
+}
+
+.page:hover {
+    background-color: #5DADE2;
+    animation: moveUpAnimation 0.3s ease-in-out forwards;
+}
+
+
+@keyframes moveUpAnimation {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+
 
 
 
@@ -105,10 +137,16 @@ body{
 
     /* responsive  Grid */
     .Grid {
-       margin: 10px;
+        margin: 10px;
     }
-    .grid-item{
+
+    .grid-item {
         margin-bottom: 0px;
+    }
+
+    .Image-About {
+        margin-top: -100px;
+        border-radius: 1pc;
     }
 
 

@@ -3,7 +3,8 @@ import Nav from './Component/Header';
 import HomeSlider from './Component/HomeSlider';
 import BellowGrid from './Component/BellowGrid';
 import AboutUs from './Component/AboutUs';
-
+import IntenshipCard from './Component/IntenshipCard'
+ 
 
 import './App.css';
 
@@ -15,6 +16,7 @@ export default function App() {
         <HomeSlider />
         <BellowGrid />
         <AboutUs/> 
+        <IntenshipCard/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

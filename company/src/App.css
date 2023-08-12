@@ -1,5 +1,3 @@
-body {}
-
 .main-header {
     position: fixed;
     top: 0;
@@ -43,11 +41,13 @@ body {}
     top: 0;
     margin: 10px;
     transition: all 0.3s Linear;
-} 
+}
+
 .Colur-Grid:hover {
     background-color: #5DADE2;
     top: -10px;
 }
+
 .caintainer {
     background-color: #D5F5E3;
     padding-bottom: 50px;
@@ -81,38 +81,66 @@ body {}
     animation: moveUpAnimation 0.3s ease-in-out forwards;
 }
 
-.item{
+.item {
     padding-left: 9pc;
     background-color: #F9E79F;
 }
 
 /* code for making slider */
-.card-Slider{
+.card-Slider {
     margin: 10pc;
 }
-.container_{
-    width: 60%; 
+
+.container_ {
+    width: 60%;
     margin: auto;
 }
-.cards-container_{
+
+.cards-container_ {
     display: flex;
     overflow-x: auto;
+
     &::-webkit-scrollbar {
         display: none;
-      }
+    }
 }
 
 .facebook-icon {
     font-size: 30px;
-    color:#2E86C1;
+    color: #2E86C1;
     transition: all 0.5s ease-in-out;
 }
-.facebook-icon:hover {
-   background-color: #008BD4;
-   border-radius: 10pc;
-   color: white;
-  }
 
+.facebook-icon:hover {
+    background-color: #008BD4;
+    border-radius: 10pc;
+    color: white;
+}
+
+.Question {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(241, 239, 197);
+    box-shadow: 13px 16px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 25px;
+}
+
+.Question:hover {
+    background-color: #008BD4;
+    color: white;
+}
+
+.Answer {
+    text-align: center;
+    padding: 23px;
+    background-color: beige;
+    /* margin: 10px; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
 
 
 
@@ -192,7 +220,8 @@ body {}
         margin-top: -100px;
         border-radius: 1pc;
     }
-    .item{
+
+    .item {
         padding-left: 0px;
     }
 

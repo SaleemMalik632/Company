@@ -6,7 +6,7 @@ import AboutUs from './Component/AboutUs';
 import './App.css';
 import Allintenships from './Component/Allintenships';
 import Slider from './Component/Cardslider';
-
+import AllQuestion from './Component/AllQuestion';
 
 
 export default function App() {
@@ -19,6 +19,7 @@ export default function App() {
         <AboutUs />
         <Allintenships />
         <Slider />
+        <AllQuestion/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

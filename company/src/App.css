@@ -101,7 +101,17 @@ body {}
         display: none;
       }
 }
-  
+
+.facebook-icon {
+    font-size: 30px;
+    color:#2E86C1;
+    transition: all 0.5s ease-in-out;
+}
+.facebook-icon:hover {
+   background-color: #008BD4;
+   border-radius: 10pc;
+   color: white;
+  }
 
 
 

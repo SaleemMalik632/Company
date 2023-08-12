@@ -33,14 +33,14 @@ export default function ImgMediaCard({ CardData }) {
         <Card sx={{ maxWidth: 300, margin: '10px', textAlign: 'justify' }}>
           <CardMedia component="img" image={CardData.url} alt="green iguana" height={200} />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center' }}>
+            <Typography gutterBottom variant="h5"  color="primary"component="div" sx={{ textAlign: 'center' }}>
               {CardData.Title}
             </Typography>
             <Typography variant='body' >
               {CardData.Description}
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions> 
             <Rating name="rating" defaultValue={CardData.Rating}> </Rating>
             <Button startIcon={<ThumbUpAlt />} onClick={setLike_}> {likeCount} Likes</Button>
           </CardActions>

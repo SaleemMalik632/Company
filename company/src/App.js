@@ -5,16 +5,11 @@ import BellowGrid from './Component/BellowGrid';
 import AboutUs from './Component/AboutUs';
 import './App.css';
 import Allintenships from './Component/Allintenships';
-import ReactCardSlider from 'react-card-slider-component';
 import Slider from './Component/Cardslider';
-import TeamCard from './Component/TeamCard';
+
+
 
 export default function App() {
-  
- 
-
-
-
   return (
     <div>
       <BrowserRouter>
@@ -22,9 +17,8 @@ export default function App() {
         <HomeSlider />
         <BellowGrid />
         <AboutUs />
-        <Allintenships  />
+        <Allintenships />
         <Slider />
-        <TeamCard/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

@@ -1,96 +1,41 @@
 import React from "react";
+import Intencard  from './IntenshipCard';
+import { useEffect, useRef, useState } from 'react';
+import Image  from './close-up-portrait-beautiful-young-brunette-female-sitting-white-desk-front-computer-home.jpg';
 
-const Card = (props) => (
-    <div className="card">
-      <img src={props.imgUrl} alt={props.alt || "Image"} />
-      <div className="card-content">
-        <h2>{props.title}</h2>
-        <p>{props.content}</p>
-      </div>
-    </div>
-  );
-  
-  const CardContainer = (props) => (
-    <div className="cards-container">
-      {props.cards.map((card) => (
-        <Card title={card.title} content={card.content} imgUrl={card.imgUrl} />
-      ))}
-    </div>
-  );
-  
-  class App_ extends React.Component { 
-    render() {
-      const cardsData = [
-        {
-          id: 1,
-          title: "CARD 1",
-          content: "Clark Kent",
-          imgUrl: "https://unsplash.it/200/200"
-        },
-        {
-          id: 2,
-          title: "CARD 2",
-          content: "Bruce Wayne",
-          imgUrl: "https://unsplash.it/201/200"
-        },
-        {
-          id: 3,
-          title: "CARD 3",
-          content: "Peter Parker",
-          imgUrl: "https://unsplash.it/200/201"
-        },
-        {
-          id: 4,
-          title: "CARD 4",
-          content: "Tony Stark",
-          imgUrl: "https://unsplash.it/201/201"
-        },
-        {
-          id: 5,
-          title: "CARD 5",
-          content: "Reed Richards",
-          imgUrl: "https://unsplash.it/202/200"
-        },
-        {
-          id: 6,
-          title: "CARD 6",
-          content: "Wade Wilson",
-          imgUrl: "https://unsplash.it/200/199"
-        },
-        {
-          id: 7,
-          title: "CARD 7",
-          content: "Peter Quill",
-          imgUrl: "https://unsplash.it/199/199"
-        },
-        {
-          id: 8,
-          title: "CARD 8",
-          content: "Steven Rogers",
-          imgUrl: "https://unsplash.it/199/200"
-        },
-        {
-          id: 9,
-          title: "CARD 9",
-          content: "Bruce Banner",
-          imgUrl: "https://unsplash.it/200/198"
-        },
-        {
-          id: 10,
-          title: "CARD 10",
-          content: "Vincent Strange",
-          imgUrl: "https://unsplash.it/198/199"
-        }
-      ];
-  
-      return (
-        <div className="container">
-          <h1 style={{ "text-align": "center" }}>React Card Slider</h1>
-  
-          <CardContainer cards={cardsData} />
+
+
+export const Cardslider = () => {
+    let [scrollcard,setscrollcard]=useState(0);
+    const containerRef = useRef();
+    const handlescrollLeft=()=>{
+        containerRef.current.scrollLeft -= 500;
+   }
+
+   const handlescrollRight=()=>{
+       containerRef.current.scrollLeft += 500;
+   }
+    const cardData = [
+
+        { Title: 'UI/UX Design', Description: 'This UX/UI internship will teach you how to create a web and mobile designs for e-Commerce web & apps. It will also teach you how to take a clients business objectives and turning them into intuitive, effective designs.', Rating: 4.5, likeCount_: 12, url: Image },
+        { Title: 'Python Intern', Description: 'This python internship will improve your problem-solving skills by making projects on real world problems. It will also improve your basic knowledge about data analytics, analysis and some python frameworks.', Rating: 4.5, likeCount_: 12, url: Image },
+        { Title: 'JAVA Intern', Description: 'Java internship will teach you how to develop android applications and software by making projects on real world problems. It will also improve your basic knowledge about how to maintain java-based components and interfaces..', Rating: 4.5, likeCount_: 12, url: Image },
+        { Title: 'Machine Learning', Description: 'Our machine learning internship will offer you to enhance your skills by doing real life example projects. This internship will increase your knowledge in the field of data and algorithms to understand how a machine learns.', Rating: 4.5, likeCount_: 12, url: Image },
+        { Title: 'Artificial Intelligence', Description: 'Our Artificial intelligence internship will offer you to enhance your skills by doing real life example projects. This internship will also teach you how a machine act like a human by training using Dataset..', Rating: 4.5, likeCount_: 12, url: Image },
+        { Title: 'React Js', Description: 'React Js internship provides you the opportunity to learn how to create, build and maintain any website and apps. This internship will also improve your practical knowledge by doing hands-on projects.', Rating: 4.5, likeCount_: 12, url: Image },
+    ];
+
+    return (
+        <div className="container_">
+           <button className="slider-icon left" onclick={(e)=>handlescrollLeft(e)}> left</button>
+            <div className="cards-container_" style={{scrollLeft:scrollcard}} ref={containerRef}>
+                {cardData.map((card) => (
+                    <Intencard  CardData={card}/> 
+                ))} 
+            </div>
+            <button className="slider-icon right" onclick={(e)=>handlescrollRight(e)}> right </button>
         </div>
-      );
-    }
-  }
-  
-export default App_;
+    );
+}
+
+export default Cardslider;

@@ -86,6 +86,33 @@ body {}
     background-color: #F9E79F;
 }
 
+/* code for making slider */
+.card-Slider{
+    margin: 10pc;
+}
+.container_{
+    width: 60%; 
+    margin: auto;
+}
+.cards-container_{
+    display: flex;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

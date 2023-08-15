@@ -7,7 +7,8 @@ import './App.css';
 import Allintenships from './Component/Allintenships';
 import Slider from './Component/Cardslider';
 import AllQuestion from './Component/AllQuestion';
-
+import QuestionSecton from './Component/QuestionSecton';
+import ChatBot from './Component/ChatBot';
 
 export default function App() {
   return (
@@ -19,11 +20,11 @@ export default function App() {
         <AboutUs />
         <Allintenships />
         <Slider />
-        <AllQuestion/> 
+        <QuestionSecton/> 
+        <ChatBot/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>
-        <h1 style={{ marginTop: '1000px' }}>sele</h1>
       </BrowserRouter>
     </div>
   );

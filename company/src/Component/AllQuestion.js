@@ -14,7 +14,7 @@ const AllQuestion = () => {
     ];
     return (
         <>
-            <div className='qcantainer'>
+            <div style={{margin:'20px'}}>
                 {
                     CardData.map((question, index) => {
                         return (

@@ -138,7 +138,30 @@
     padding: 23px;
     background-color: beige;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+
+.followus ul{
+    list-style: none;
 }
+.followus ul li{
+    margin-top: 13px;
+    transition: all 0.5s ease-in-out;
+    width: 105px;
+} 
+.followus ul li:hover{
+    transform: translateX(5px);
+    position: relative;
+}
+.followus ul li a{
+    text-decoration: none;
+    color: #008BD4;
+} 
+
+
+
+
+
 
 
 

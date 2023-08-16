@@ -10,6 +10,7 @@ import QuestionSecton from './Component/QuestionSecton';
 import ChatBot from './Component/ChatBot';
 import Footer from './Component/Footer';
 import Infopro from './Component/Infopro';
+import FollowUs from './Component/FollowUs';
 
 
 export default function App() {
@@ -25,7 +26,8 @@ export default function App() {
         <QuestionSecton/> 
         <ChatBot/> 
         {/* <Footer/> */}
-        <Infopro/> 
+        {/* <Infopro/>  */}
+        {/* <FollowUs/> */}
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

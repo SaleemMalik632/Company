@@ -11,6 +11,7 @@ import ChatBot from './Component/ChatBot';
 import Footer from './Component/Footer';
 import Infopro from './Component/Infopro';
 import FollowUs from './Component/FollowUs';
+import FormsFooter from './Component/FormsFooter';
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         {/* <Footer/> */}
         {/* <Infopro/>  */}
         {/* <FollowUs/> */}
+        <FormsFooter/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>

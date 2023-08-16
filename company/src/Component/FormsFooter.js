@@ -11,7 +11,7 @@ export default function HelperTextMisaligned() {
     const Email = React.useRef();
     const Message = React.useRef();
     function Submission() {
-        console.log(firstname.current.value);
+        firstname.current.style.color= 'red';
     }
 
 

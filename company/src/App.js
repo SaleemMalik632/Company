@@ -6,9 +6,11 @@ import AboutUs from './Component/AboutUs';
 import './App.css';
 import Allintenships from './Component/Allintenships';
 import Slider from './Component/Cardslider';
-import AllQuestion from './Component/AllQuestion';
 import QuestionSecton from './Component/QuestionSecton';
 import ChatBot from './Component/ChatBot';
+import Footer from './Component/Footer';
+import Infopro from './Component/Infopro';
+
 
 export default function App() {
   return (
@@ -22,9 +24,12 @@ export default function App() {
         <Slider />
         <QuestionSecton/> 
         <ChatBot/> 
+        {/* <Footer/> */}
+        <Infopro/> 
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>
+        <h2 style={{marginTop:'100px'}}>shape</h2>
       </BrowserRouter>
     </div>
   );

@@ -7,7 +7,7 @@ import { Email, Place } from '@mui/icons-material';
 
 const Footer = () => {
     return (
-        <div style={{ background: "url('http://www.w3.org/2000/svg') repeat-x bottom" }}>
+        <div> 
             <Grid container style={{ backgroundColor: "#D5F5E3", marginTop: '10px' }} spacing={2}>
                 <Grid item lg={3} xs={12} md={6} >
                     <Infopro />

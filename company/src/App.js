@@ -9,9 +9,8 @@ import Slider from './Component/Cardslider';
 import QuestionSecton from './Component/QuestionSecton';
 import ChatBot from './Component/ChatBot';
 import Footer from './Component/Footer';
-import Infopro from './Component/Infopro';
-import FollowUs from './Component/FollowUs';
-import FormsFooter from './Component/FormsFooter';
+
+
 
 
 export default function App() {
@@ -24,16 +23,12 @@ export default function App() {
         <AboutUs />
         <Allintenships />
         <Slider />
-        <QuestionSecton/> 
-        <ChatBot/> 
-        {/* <Footer/> */}
-        {/* <Infopro/>  */}
-        {/* <FollowUs/> */}
-        <FormsFooter/> 
+        <QuestionSecton />
+        <ChatBot />
+        <Footer/>
         <Routes>
           <Route path="/about" exect element={'< Text abouts  />'} />
         </Routes>
-        <h2 style={{marginTop:'100px'}}>shape</h2>
       </BrowserRouter>
     </div>
   );

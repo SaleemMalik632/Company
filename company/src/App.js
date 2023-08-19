@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Nav from './Component/Header';
 import HomeSlider from './Component/HomeSlider';
 import BellowGrid from './Component/BellowGrid';
@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Nav />
+        <Nav />
         <div id="home">
           <HomeSlider />
         </div>
@@ -29,16 +29,16 @@ export default function App() {
         <div id="internships">
           <Allintenships />
         </div>
-        <div id="team"> 
+        <div id="team">
           <Slider />
         </div>
-        <div id="faq">
+        <div id="faq"> 
           <QuestionSecton />
         </div>
         <div id="contact">
           <ChatBot />
           <Footer />
-        </div> */}
+        </div>
       </BrowserRouter>
     </div>
   );

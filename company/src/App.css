@@ -21,6 +21,7 @@
 
 .nav-elements ul a {
     margin-right: 40px;
+    cursor: pointer;
     text-decoration: none;
     color: black;
 }
@@ -215,7 +216,7 @@
 
     .nav-elements.active {
         width: 300px;
-        background: yellow;
+        background: linear-gradient(90deg, #FFFF00 1%, #FFEB3B 3%, #008BD4 100%, #EE82EE 100%, #2196F3 100%);
     }
 
     .nav-elements ul {

@@ -1,33 +1,15 @@
-import React, { useState, useRef } from "react";
-import { NavLink } from 'react-router-dom';
+import React, { useState } from "react";
 import { FaBars } from 'react-icons/fa';
+import { Link } from "react-scroll";
 import { Home, Info, Work, People, Phone, QuestionAnswer } from '@mui/icons-material';
-import HomeSlider from './HomeSlider';
-import BellowGrid from './BellowGrid';
-import AboutUs from './AboutUs';
-import Allintenships from './Allintenships';
-import Slider from './Cardslider';
-import QuestionSecton from './QuestionSecton';
-import ChatBot from './ChatBot';
-import Footer from './Footer';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const home = useRef(null);
-    const About = useRef(null);
-    const Services = useRef(null);
-    const Internships = useRef(null);
-    const Team = useRef(null);
-    const Contact = useRef(null);
-    const FAQ = useRef(null);
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    const scrolDown = (ref) => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    return (
+    return ( 
         <>
             <nav className={`main-header`} style={{ zIndex: 100 }}>
                 <div className={"main-head"}>
@@ -40,40 +22,33 @@ const Navbar = () => {
                     <div className={`nav-elements ${isMenuOpen && 'active'}`}>
                         <ul>
                             <li>
-                                <NavLink onClick={() => scrolDown(home)} className="link" to={'/home'}> <Home style={{ marginBottom: '-9px' }} /> Home </NavLink>
+                                <Link className="link" smooth={true} to="home" > <Home style={{ marginBottom: '-9px' }} /> Home </Link>
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(About)} className="link" to={'/About'}> <Info style={{ marginBottom: '-9px' }} /> About </NavLink>
+                                <Link className="link" smooth={true} to='about'> <Info style={{ marginBottom: '-9px' }} /> About </Link >
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(Services)} className="link" to={'/Services'}> <Work style={{ marginBottom: '-9px' }} /> Services </NavLink>
+                                <Link className="link" smooth={true} to='services'> <Work style={{ marginBottom: '-9px' }} /> Services </Link >
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(Internships)} className="link" to={'/Internships'}> <People style={{ marginBottom: '-9px' }} /> Internships </NavLink>
+                                <Link className="link" smooth={true} to='internships'> <People style={{ marginBottom: '-9px' }} /> Internships </Link >
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(Team)} className="link" to={'/Team'}> <People style={{ marginBottom: '-9px' }} /> Team </NavLink>
+                                <Link className="link" smooth={true} to='team'> <People style={{ marginBottom: '-9px' }} /> Team </Link >
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(Contact)} className="link" to={'/Contact'}> <Phone style={{ marginBottom: '-9px' }} /> Contact </NavLink>
+                                <Link className="link" smooth={true} to='contact'> <Phone style={{ marginBottom: '-9px' }} /> Contact </Link >
                             </li>
                             <li>
-                                <NavLink onClick={() => scrolDown(FAQ)} className="link" to={'/FAQ'}> <QuestionAnswer style={{ marginBottom: '-9px' }} /> FAQ </NavLink>
+                                <Link className="link" smooth={true} to='faq'> <QuestionAnswer style={{ marginBottom: '-9px' }} /> FAQ </Link >
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </nav>
-            <HomeSlider ref={home} />
-            <BellowGrid ref={Services} />
-            <AboutUs ref={About} />
-            <Allintenships ref={Internships} />
-            <Slider ref={Team} />
-            <QuestionSecton ref={FAQ} />
-            <ChatBot />
-            <Footer ref={Contact} />
         </>
+
+
     );
 };
 

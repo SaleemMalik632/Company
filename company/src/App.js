@@ -12,23 +12,33 @@ import Footer from './Component/Footer';
 
 
 
-
 export default function App() {
   return (
     <div>
       <BrowserRouter>
-        <Nav />
-        <HomeSlider />
-        <BellowGrid />
-        <AboutUs />
-        <Allintenships />
-        <Slider />
-        <QuestionSecton />
-        <ChatBot />
-        <Footer/>
-        <Routes>
-          <Route path="/about" exect element={'< Text abouts  />'} />
-        </Routes>
+        {/* <Nav />
+        <div id="home">
+          <HomeSlider />
+        </div>
+        <div id="services">
+          <BellowGrid />
+        </div>
+        <div id="about">
+          <AboutUs />
+        </div>
+        <div id="internships">
+          <Allintenships />
+        </div>
+        <div id="team"> 
+          <Slider />
+        </div>
+        <div id="faq">
+          <QuestionSecton />
+        </div>
+        <div id="contact">
+          <ChatBot />
+          <Footer />
+        </div> */}
       </BrowserRouter>
     </div>
   );

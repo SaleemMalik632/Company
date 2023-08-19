@@ -31,16 +31,16 @@ export default function ImgMediaCard({ CardData }) {
     <>
       <CardActions>
         <Card sx={{ maxWidth: 300, margin: '10px', textAlign: 'justify' }}>
-          <CardMedia component="img" image={CardData.url} alt="green iguana" height={200} />
+          <CardMedia component="img" image={CardData.url} alt="green iguana" style={{ objectFit: 'contain', height: '100%' }} />
           <CardContent>
-            <Typography gutterBottom variant="h5"  color="primary"component="div" sx={{ textAlign: 'center' }}>
+            <Typography gutterBottom variant="h5" color="primary" component="div" sx={{ textAlign: 'center' }}>
               {CardData.Title}
             </Typography>
             <Typography variant='body' >
               {CardData.Description}
             </Typography>
           </CardContent>
-          <CardActions> 
+          <CardActions>
             <Rating name="rating" defaultValue={CardData.Rating}> </Rating>
             <Button startIcon={<ThumbUpAlt />} onClick={setLike_}> {likeCount} Likes</Button>
           </CardActions>
@@ -48,11 +48,11 @@ export default function ImgMediaCard({ CardData }) {
             <Button variant="outlined" sx={{
               '&:hover': {
                 backgroundColor: '#1976d2', // Color when hovered
-                color:'white'
+                color: 'white'
               },
               '&:focus': {
                 backgroundColor: '#0d47a1', // Color when focused
-                color:'white'
+                color: 'white'
               },
             }}>Apply Now</Button>
           </CardActions>

@@ -18,12 +18,12 @@ const Navbar = () => {
                     </div>
                     <div className="icon" onClick={toggleMenu}>
                         <FaBars size={30} />
-                    </div>
+                    </div> 
                     <div className={`nav-elements ${isMenuOpen && 'active'}`}>
                         <ul>
                             <li>
                                 <Link className="link" smooth={true} to="home" > <Home style={{ marginBottom: '-9px' }} /> Home </Link>
-                            </li>
+                            </li> 
                             <li>
                                 <Link className="link" smooth={true} to='about'> <Info style={{ marginBottom: '-9px' }} /> About </Link >
                             </li>
